@@ -16,7 +16,7 @@ import com.sonata.model.Customer;
 
 public class CustomerImpl {
         public int registerCustomer(Customer customer) throws ClassNotFoundException {
-            String INSERT_USERS_SQL = ("INSERT INTO new_table values (?, ?, ?, ?,?,?);");
+            String INSERT_USERS_SQL = ("INSERT INTO customer values (?, ?, ?, ?,?,?);");
 
               int result = 0;
 

@@ -6,9 +6,12 @@
 		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
     
    
-   <bean id = "addition" class = "com.sonata.impl.DefaultAdditionImpl" />
-   <bean id ="calc" class = "com.sonata.impl.DefaultCalculatorImpl" >
-   		<property name="add" ref="addition"></property>
+   <bean id = "validateuser" class = "com.sonata.impl.User" />
+   <bean id ="login" class = "com.sonata.impl.Login" >
+   		<property name="validateuser" ref="UserInterface"></property>
    </bean>
-
+   <bean id ="order" class = "com.sonata.impl.Order" >
+   		<property name="validateuser" ref="UserInterface"></property>
+   		<property name="login" ref="LoginInterface"></property>
+   </bean>
 </beans>
